@@ -1,17 +1,15 @@
-$bgColor: #24292e;
-$text: #fff;
+@import 'swiper/modules/pagination/pagination.scss';
+@import 'swiper/swiper.scss';
+@import '../scss/project-normalize.scss';
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
-}
+@import '../scss/popup-call.scss';
+@import '../scss/popup-message.scss';
+@import '../scss/popup-menu.scss';
+@import '../scss/header.scss';
+@import '../scss/slide-menu.scss';
+@import '../scss/about.scss';
+@import '../scss/brands.scss';
+@import '../scss/types.scss';
+@import '../scss/prices.scss';
+@import '../scss/offer.scss';
+@import '../scss/footer.scss';

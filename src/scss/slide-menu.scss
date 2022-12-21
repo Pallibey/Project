@@ -1,0 +1,39 @@
+.slide-menu {
+  box-sizing: border-box;
+
+  &__list {
+    margin-left: 1em;
+    display: flex;
+    overflow-x: scroll;
+
+    @media (min-width: $screen-lg) {
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+
+    &::-webkit-scrollbar {
+      background-color: #f8f8f8;
+    }
+  }
+
+  &__list-item {
+    white-space: nowrap;
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #7e7e82;
+    padding: 8px 1em;
+    border: 2px solid transparent;
+
+    &:hover {
+      background-color: #ffffff;
+      border: 2px solid #b8ffec;
+      border-radius: 6px;
+    }
+  }
+}

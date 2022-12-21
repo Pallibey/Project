@@ -1,0 +1,136 @@
+.header {
+  @media (min-width: $screen-lg) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+/*------Меню------*/
+
+.menu {
+  background-color: white;
+  border-bottom: 1px solid #d9fff5;
+  height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $screen-lg) {
+    background-color: transparent;
+    border: none;
+  }
+
+  &__logo-container {
+    flex-grow: 1;
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    width: 97px;
+    height: 51px;
+  }
+
+  &__first-ic {
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &__ic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition-duration: 0.5s;
+
+    &:hover {
+      opacity: 0.7;
+      transition-duration: 0.5s;
+    }
+  }
+
+  &__ic-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ff3e79;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__ic-text {
+    display: none;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    @media (min-width: $screen-lg) {
+      display: inline;
+    }
+  }
+
+  &__order {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-right: 1em;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      position: relative;
+      height: 32px;
+      right: 0.4em;
+      border-left: 2px solid #eaeaea;
+      border-radius: 1px;
+      @media (min-width: $screen-lg) {
+        border: none;
+      }
+    }
+  }
+
+  &__message {
+    display: none;
+    @media (min-width: $screen-md) {
+      display: flex;
+      gap: 1em;
+      margin-right: 1.8em;
+    }
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+}
+
+/*------Заголовок------*/
+
+.title-container {
+  margin-top: 1em;
+  margin-bottom: 0.8em;
+
+  @media (min-width: $screen-lg) {
+    margin-top: 1.8em;
+    margin-bottom: 1.2em;
+  }
+}
+
+.title {
+  line-height: 40px;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: -0.6px;
+
+  &::before {
+    content: ' ';
+    margin-right: 0.8em;
+    height: 40px;
+    border-right: 4px solid #41f6d7;
+    border-radius: 2px;
+  }
+}

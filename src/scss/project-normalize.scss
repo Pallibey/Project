@@ -1,0 +1,235 @@
+/*------Шрифты------*/
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Regular.eot');
+  src: local('@'),
+    url('../fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTLakes-Regular.woff') format('woff'),
+    url('../fonts/TTLakes-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Bold.eot');
+  src: local('@'),
+    url('../fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTLakes-Bold.woff') format('woff'),
+    url('../fonts/TTLakes-Bold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Medium.eot');
+  src: local('@'),
+    url('../fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTLakes-Medium.woff') format('woff'),
+    url('../fonts/TTLakes-Medium.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/*------Обнуление стилей------*/
+
+html,
+body,
+div,
+span,
+a,
+img,
+dl,
+dt,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dd,
+ol,
+ul,
+li,
+article,
+aside,
+footer,
+header,
+nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*------Переменные для проекта------*/
+
+$screen-md: 720px;
+$screen-xl: 1130px;
+$screen-lg: 1440px;
+
+/*------Стили для проекта------*/
+
+input,
+label,
+textarea {
+  font-family: 'TT Lakes';
+}
+
+button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  font-family: 'TT Lakes';
+  font-size: inherit;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+body {
+  font-family: 'TT Lakes';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: #f8f8f8;
+  color: #1b1c21;
+
+  @media (min-width: $screen-md) {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @media (min-width: $screen-lg) {
+    line-height: 20px;
+  }
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  @media (min-width: $screen-lg) {
+    display: flex;
+    max-width: 1440px;
+  }
+}
+
+.popup--hide {
+  display: none !important;
+}
+
+.popup--shown {
+  display: block !important;
+}
+
+.max-height-for-block {
+  height: auto !important;
+}
+
+.popup-container {
+  display: flex;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  min-width: 320px;
+  max-width: 360px;
+  height: 100%;
+  background-color: white;
+  flex-direction: column;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 2;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  opacity: 0.7;
+}
+
+.button-read-more {
+  display: flex;
+  gap: 0.8em;
+  border: none;
+  background-color: transparent;
+  font-family: 'TT Lakes';
+  font-weight: 300;
+  font-size: 1.1em;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+
+  .img-rotate {
+    transform: rotate(180deg);
+  }
+}
+
+.section-title {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: #7e7e82;
+  letter-spacing: -0.2px;
+}
+
+.swiper {
+  @media (min-width: $screen-md) {
+    padding-right: 2em;
+  }
+  .swiper-wrapper {
+    display: flex;
+    align-content: flex-start;
+    padding-top: 1.2em;
+    padding-left: 1.2em;
+    padding-bottom: 2.5em;
+
+    @media (min-width: $screen-md) {
+      gap: 1.2em;
+      padding-left: 2em;
+      padding-bottom: 1.2em;
+      flex-wrap: wrap;
+    }
+  }
+
+  .swiper-slide {
+    transition: 0.5s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #b5b6bc;
+  }
+
+  .swiper-pagination {
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+}

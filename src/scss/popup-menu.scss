@@ -1,0 +1,137 @@
+.popup-menu {
+  display: none;
+
+  @media (min-width: $screen-lg) {
+    display: block;
+  }
+
+  .popup-container {
+    left: 0;
+    padding: 18px 24px 30px 24px;
+    box-shadow: 16px 0px 52px 0px #0e185033, -2px 0px 4px 0px #454f7e05;
+
+    @media (min-width: $screen-lg) {
+      position: relative;
+      box-shadow: none;
+    }
+  }
+
+  .menu {
+    border: none;
+    display: flex;
+    gap: 1.1em;
+
+    &__item {
+      display: block;
+    }
+
+    .ic-close {
+      @media (min-width: $screen-lg) {
+        display: none;
+      }
+    }
+  }
+
+  .categories {
+    flex-grow: 1;
+
+    &__list {
+      margin-top: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding-bottom: 24px;
+    }
+
+    &__list-item {
+      font-weight: 300;
+    }
+
+    &__link {
+      position: relative;
+      display: block;
+      padding: 4px;
+    }
+  }
+
+  .categories__link,
+  .lang__option {
+    transition-duration: 0.5s;
+  }
+
+  .categories__link:hover,
+  .lang__option:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition-duration: 0.5s;
+  }
+
+  .active-link,
+  .active-lang {
+    position: relative;
+    opacity: 0.7;
+  }
+
+  .active-link::before,
+  .categories__link::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: -25px;
+    height: 32px;
+    width: 1px;
+    border-right: 4px solid #41f6d7;
+    border-radius: 3px;
+    opacity: 0;
+  }
+
+  .active-link::before,
+  .categories__link:hover::before {
+    opacity: 1;
+    transition-duration: 0.5s;
+  }
+
+  .menu-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    @media (min-width: $screen-lg) {
+      flex-grow: 3;
+    }
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .menu__message {
+    display: flex;
+    gap: 1em;
+  }
+
+  .mail {
+    font-weight: 300;
+  }
+
+  .phone {
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  .lang {
+    display: flex;
+    gap: 1em;
+  }
+
+  .lang__option {
+    font-weight: 300;
+  }
+
+  .overlay {
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+}
