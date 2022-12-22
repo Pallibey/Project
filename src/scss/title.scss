@@ -1,0 +1,24 @@
+.title-container {
+  margin-top: 1em;
+  margin-bottom: 0.8em;
+
+  @media (min-width: $screen-lg) {
+    margin-top: 1.8em;
+    margin-bottom: 1.2em;
+  }
+}
+
+.title {
+  line-height: 40px;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: -0.6px;
+
+  &::before {
+    content: ' ';
+    margin-right: 0.8em;
+    height: 40px;
+    border-right: 4px solid #41f6d7;
+    border-radius: 2px;
+  }
+}

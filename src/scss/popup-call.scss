@@ -3,16 +3,17 @@
   position: relative;
 
   .overlay {
-    width: 100vw;
     z-index: 4;
   }
 
   .popup-container {
+    position: fixed;
     right: 0;
     border-left: 1px solid #d9fff5;
     border-radius: 1px;
     z-index: 5;
     max-width: 440px;
+    animation: right-popup 0.6s forwards;
   }
 
   &__ic-close {

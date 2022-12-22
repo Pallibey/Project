@@ -13,17 +13,18 @@
     padding: 0.8em 0 1em 1.2em;
 
     @media (min-width: $screen-md) {
-      display: block;
+      display: flex;
     }
   }
 }
 
-.brands__swiper {
+div.brands__swiper {
   @media (min-width: $screen-md) {
-    height: 220px;
+    max-height: 210px;
+    transition: max-height 2s;
   }
   @media (min-width: $screen-xl) {
-    height: auto;
+    max-height: 888px;
   }
 
   .swiper-slide {

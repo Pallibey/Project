@@ -91,6 +91,26 @@ $screen-md: 720px;
 $screen-xl: 1130px;
 $screen-lg: 1440px;
 
+@keyframes right-popup {
+  0% {
+    transform: translateX(200px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes left-popup {
+  0% {
+    transform: translateX(-200px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
 /*------Стили для проекта------*/
 
 input,
@@ -139,6 +159,19 @@ body {
   }
 }
 
+.wrapper-content {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  flex-grow: 1;
+}
+
+main {
+  flex-grow: 1;
+}
+
 .popup--hide {
   display: none !important;
 }
@@ -148,7 +181,11 @@ body {
 }
 
 .max-height-for-block {
-  height: auto !important;
+  max-height: 555px !important;
+}
+
+.withoutScroll {
+  overflow: hidden;
 }
 
 .popup-container {
@@ -195,9 +232,9 @@ body {
   letter-spacing: -0.2px;
 }
 
-.swiper {
+div.swiper {
   @media (min-width: $screen-md) {
-    padding-right: 2em;
+    padding: 1.2em 1.2em;
   }
   .swiper-wrapper {
     display: flex;
@@ -207,9 +244,8 @@ body {
     padding-bottom: 2.5em;
 
     @media (min-width: $screen-md) {
-      gap: 1.2em;
-      padding-left: 2em;
-      padding-bottom: 1.2em;
+      gap: 1em;
+      padding: 0;
       flex-wrap: wrap;
     }
   }

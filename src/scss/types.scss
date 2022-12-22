@@ -10,20 +10,18 @@
 
   &__button {
     display: none;
-    padding: 0.8em 0 1em 1.2em;
+    margin: 0.8em 0 1em 1.2em;
 
     @media (min-width: $screen-md) {
-      display: block;
+      display: flex;
     }
   }
 }
 
-.types__swiper {
+div.types__swiper {
   @media (min-width: $screen-md) {
-    height: 195px;
-  }
-  @media (min-width: $screen-xl) {
-    height: auto;
+    max-height: 195px;
+    transition: max-height 2s;
   }
 
   .swiper-slide {

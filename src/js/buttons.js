@@ -38,54 +38,36 @@ let messagePopupBtn = document.querySelector('#message')
 let popup = document.querySelectorAll('#popup')
 let closePopupBtn = document.querySelectorAll('.ic-close')
 let popupOverlay = document.querySelectorAll('.overlay')
+let body = document.querySelector('body')
 
 callPopupBtn.addEventListener('click', function () {
-  if (popup[0].classList.contains('popup--hide')) {
-    popup[0].classList.remove('popup--hide')
-  }
-  popup[0].classList.add('popup--shown')
-  document.body.style.position = 'fixed'
-  document.body.style.top = `-${window.scrollY}px`
+  popup[0].classList.toggle('popup--hide')
+  popup[0].classList.toggle('popup--shown')
+  body.classList.toggle('withoutScroll')
 })
 
 messagePopupBtn.addEventListener('click', function () {
-  if (popup[1].classList.contains('popup--hide')) {
-    popup[1].classList.remove('popup--hide')
-  }
-  popup[1].classList.add('popup--shown')
-  document.body.style.position = 'fixed'
-  document.body.style.top = `-${window.scrollY}px`
+  popup[1].classList.toggle('popup--hide')
+  popup[1].classList.toggle('popup--shown')
+  body.classList.toggle('withoutScroll')
 })
 
 menuPopupBtn.addEventListener('click', function () {
-  if (popup[2].classList.contains('popup--hide')) {
-    popup[2].classList.remove('popup--hide')
-  }
-  popup[2].classList.add('popup--shown')
-  document.body.style.position = 'fixed'
-  document.body.style.top = `-${window.scrollY}px`
+  popup[2].classList.toggle('popup--hide')
+  popup[2].classList.toggle('popup--shown')
+  body.classList.toggle('withoutScroll')
 })
 
 for (let i = 0; i < popup.length; i++) {
   closePopupBtn[i].addEventListener('click', function () {
-    if (popup[i].classList.contains('popup--shown')) {
-      popup[i].classList.remove('popup--shown')
-    }
-    popup[i].classList.add('popup--hide')
-    const scrollY = document.body.style.top
-    document.body.style.position = ''
-    document.body.style.top = ''
-    window.scrollTo(0, parseInt(scrollY || '0') * -1)
+    popup[i].classList.toggle('popup--shown')
+    popup[i].classList.toggle('popup--hide')
+    body.classList.toggle('withoutScroll')
   })
 
   popupOverlay[i].addEventListener('click', function () {
-    if (popup[i].classList.contains('popup--shown')) {
-      popup[i].classList.remove('popup--shown')
-    }
-    popup[i].classList.add('popup--hide')
-    const scrollY = document.body.style.top
-    document.body.style.position = ''
-    document.body.style.top = ''
-    window.scrollTo(0, parseInt(scrollY || '0') * -1)
+    popup[i].classList.toggle('popup--shown')
+    popup[i].classList.toggle('popup--hide')
+    body.classList.toggle('withoutScroll')
   })
 }

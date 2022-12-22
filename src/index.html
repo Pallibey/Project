@@ -254,36 +254,36 @@
             <h1 class="title">Услуги и сервисы</h1>
           </div>
         </header>
-
-        <!-- Навигационное меню -->
-
-        <nav class="slide-menu">
-          <ul class="slide-menu__list">
-            <li class="slide-menu__list-item">
-              <a class="slide-menu__link" href="#">
-                Ремонтируемые устройства
-              </a>
-            </li>
-            <li class="slide-menu__list-item">
-              <a class="slide-menu__link" href="#"> Дополнительные услуги </a>
-            </li>
-            <li class="slide-menu__list-item">
-              <a class="slide-menu__link" href="#"> Цены на услуги </a>
-            </li>
-            <li class="slide-menu__list-item">
-              <a class="slide-menu__link" href="#">
-                Адреса сервисных центров
-              </a>
-            </li>
-            <li class="slide-menu__list-item">
-              <a class="slide-menu__link" href="#"> Специальные цены </a>
-            </li>
-            <li class="slide-menu__list-item">
-              <a class="slide-menu__link" href="#"> Отзывы </a>
-            </li>
-          </ul>
-        </nav>
         <main class="main">
+          <!-- Навигационное меню -->
+
+          <nav class="slide-menu">
+            <ul class="slide-menu__list">
+              <li class="slide-menu__list-item">
+                <a class="slide-menu__link" href="#">
+                  Ремонтируемые устройства
+                </a>
+              </li>
+              <li class="slide-menu__list-item">
+                <a class="slide-menu__link" href="#"> Дополнительные услуги </a>
+              </li>
+              <li class="slide-menu__list-item">
+                <a class="slide-menu__link" href="#"> Цены на услуги </a>
+              </li>
+              <li class="slide-menu__list-item">
+                <a class="slide-menu__link" href="#">
+                  Адреса сервисных центров
+                </a>
+              </li>
+              <li class="slide-menu__list-item">
+                <a class="slide-menu__link" href="#"> Специальные цены </a>
+              </li>
+              <li class="slide-menu__list-item">
+                <a class="slide-menu__link" href="#"> Отзывы </a>
+              </li>
+            </ul>
+          </nav>
+
           <!-- Секция "О компании" -->
 
           <section class="about">
@@ -462,16 +462,14 @@
               </ul>
               <div class="swiper-pagination"></div>
             </div>
-            <div class="brands__button">
-              <button class="button-read-more">
-                <span class="img"
-                  ><img
-                    src="/img/main/about/about__button.svg"
-                    alt="Показать все"
-                /></span>
-                <span class="text">Показать все</span>
-              </button>
-            </div>
+            <button class="brands__button button-read-more">
+              <span class="img"
+                ><img
+                  src="/img/main/about/about__button.svg"
+                  alt="Показать все"
+              /></span>
+              <span class="text">Показать все</span>
+            </button>
           </section>
 
           <!------Секция "виды техники"------>
@@ -531,19 +529,41 @@
                     </button>
                   </a>
                 </li>
+                <li class="swiper-slide">
+                  <a href="#" class="types-item__link">
+                    <span class="types-item__text"> Ремонт телефонов </span>
+                    <button class="types-item__button">
+                      <img
+                        src="img/main/brands/button-ic.svg"
+                        alt="Перейти"
+                        class="types-item__button-img"
+                      />
+                    </button>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#" class="types-item__link">
+                    <span class="types-item__text"> Ремонт телевизоров </span>
+                    <button class="types-item__button">
+                      <img
+                        src="img/main/brands/button-ic.svg"
+                        alt="Перейти"
+                        class="types-item__button-img"
+                      />
+                    </button>
+                  </a>
+                </li>
               </ul>
               <div class="swiper-pagination"></div>
             </div>
-            <div class="types__button">
-              <button class="button-read-more">
-                <span class="img"
-                  ><img
-                    src="/img/main/about/about__button.svg"
-                    alt="Показать все"
-                /></span>
-                <span class="text">Показать все</span>
-              </button>
-            </div>
+            <button class="types__button button-read-more">
+              <span class="img"
+                ><img
+                  src="/img/main/about/about__button.svg"
+                  alt="Показать все"
+              /></span>
+              <span class="text">Показать все</span>
+            </button>
           </section>
 
           <!------Секция "Цены"------>
@@ -700,35 +720,33 @@
               </ul>
               <div class="swiper-pagination"></div>
             </div>
-          </section>
 
-          <!------Коммерческое предложение------>
-          <section class="offer">
-            <p class="offer__text">
-              Все цены указаны с учетом НДС. Стоимость ремонта указана на
-              единичную услугу. Для получения коммерческого предложения на
-              постоянное обслуживание, оставьте заявку.
-            </p>
-            <a href="#" class="offer__link">
-              <span class="offer__link-text">
-                Получить коммерческое предложение
-              </span>
-              <button class="offer__link-button">
-                <img
-                  src="img/main/brands/button-ic.svg"
-                  alt="Перейти"
-                  class="offer__button-img"
-                />
-              </button>
-            </a>
+            <!------Коммерческое предложение------>
+            <div class="offer">
+              <p class="offer__text">
+                Все цены указаны с учетом НДС. Стоимость ремонта указана на
+                единичную услугу. Для получения коммерческого предложения на
+                постоянное обслуживание, оставьте заявку.
+              </p>
+              <a href="#" class="offer__link">
+                <span class="offer__link-text">
+                  Получить коммерческое предложение
+                </span>
+                <button class="offer__link-button">
+                  <img
+                    src="img/main/brands/button-ic.svg"
+                    alt="Перейти"
+                    class="offer__button-img"
+                  />
+                </button>
+              </a>
+            </div>
           </section>
         </main>
         <footer class="additionally">
           <div class="additionally__creators">
             <span class="additionally__text">© 2019 CPS</span>
-            <span class="additionally__text"
-              >Разработано командой Apesong
-            </span>
+            <span class="additionally__text">Разработано командой Apesong</span>
           </div>
           <a href="#" class="additionally__link">Политика конфиденциальности</a>
           <div class="additionally__offer">

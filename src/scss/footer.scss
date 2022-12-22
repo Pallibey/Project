@@ -1,6 +1,5 @@
 .additionally {
   margin-top: 3em;
-  height: 10em;
   padding: 1em;
   border-top: 1px solid #d9fff5;
   display: flex;
@@ -10,24 +9,24 @@
   @media (min-width: $screen-md) {
     flex-direction: row;
     align-items: flex-start;
-    padding-top: 3em;
+    padding: 2em;
   }
 
   &__text {
     color: #7e7e82;
     opacity: 72.18%;
+    font-size: 0.9em;
   }
 
   &__link {
     color: #7e7e82;
     opacity: 72.18%;
-    width: 100%;
+    font-size: 0.9em;
     text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: 1em 0;
     @media (min-width: $screen-md) {
       margin: 0;
-      text-align: start;
+      flex-grow: 2;
     }
   }
 
@@ -37,7 +36,7 @@
     text-align: center;
     @media (min-width: $screen-md) {
       text-align: start;
-      width: 100%;
+      flex-grow: 1;
     }
   }
 
@@ -45,6 +44,7 @@
     text-align: center;
     @media (min-width: $screen-md) {
       text-align: end;
+      width: 30%;
     }
   }
 }
