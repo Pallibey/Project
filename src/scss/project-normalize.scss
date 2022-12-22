@@ -234,7 +234,8 @@ main {
 
 div.swiper {
   @media (min-width: $screen-md) {
-    padding: 1.2em 1.2em;
+    padding: 1.2em 0;
+    padding-left: 1em;
   }
   .swiper-wrapper {
     display: flex;
