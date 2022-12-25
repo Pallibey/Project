@@ -182,36 +182,37 @@ main {
   color: #7e7e82;
   letter-spacing: -0.2px; }
 
-@media (min-width: 720px) {
-  div.swiper {
-    padding: 1.2em 0;
-    padding-left: 1em; } }
-
-div.swiper .swiper-wrapper {
-  display: flex;
-  align-content: flex-start;
-  padding-top: 1.2em;
-  padding-left: 1.2em;
-  padding-bottom: 2.5em; }
+div.swiper {
+  padding-left: 1.2em; }
   @media (min-width: 720px) {
-    div.swiper .swiper-wrapper {
-      gap: 1em;
-      padding: 0;
-      flex-wrap: wrap; } }
-
-div.swiper .swiper-slide {
-  transition: 0.5s; }
-  div.swiper .swiper-slide:hover {
-    opacity: 0.7; }
-
-div.swiper .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #b5b6bc; }
-
-@media (min-width: 720px) {
-  div.swiper .swiper-pagination {
-    display: none; } }
+    div.swiper {
+      padding: 1.2em 0;
+      padding-left: 1em; } }
+  div.swiper .swiper-wrapper {
+    display: flex;
+    align-content: flex-start;
+    padding-top: 1.2em;
+    padding-bottom: 2.5em; }
+    @media (min-width: 720px) {
+      div.swiper .swiper-wrapper {
+        gap: 1em;
+        padding: 0;
+        flex-wrap: wrap; } }
+  div.swiper .swiper-slide {
+    margin-right: 16px;
+    transition: 0.5s; }
+    @media (min-width: 720px) {
+      div.swiper .swiper-slide {
+        margin-right: 0; } }
+    div.swiper .swiper-slide:hover {
+      opacity: 0.7; }
+  div.swiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #b5b6bc; }
+  @media (min-width: 720px) {
+    div.swiper .swiper-pagination {
+      display: none; } }
 
 :root {
   /*
@@ -887,10 +888,11 @@ div.swiper .swiper-pagination-bullet {
 .about {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; }
+  align-items: center; }
   @media (min-width: 720px) {
     .about {
-      flex-direction: row; } }
+      flex-direction: row;
+      align-items: flex-start; } }
   .about__content {
     display: flex;
     flex-direction: column;
@@ -924,10 +926,11 @@ div.swiper .swiper-pagination-bullet {
   .about__picture-container {
     display: flex;
     justify-content: center;
-    margin: 1.6em;
-    width: 100%; }
+    margin-top: 1.6em;
+    margin-bottom: 1.6em; }
     @media (min-width: 720px) {
       .about__picture-container {
+        margin: 1.6em;
         margin-top: 1em;
         height: 208px; } }
     @media (min-width: 1440px) {
