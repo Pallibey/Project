@@ -4,7 +4,6 @@ const swiper = new Swiper('.swiper', {
   modules: [Pagination],
   breakpoints: {
     720: {
-      spaceBetween: 0,
       enabled: false
     }
   },
@@ -12,6 +11,6 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-pagination',
     clickable: true
   },
-  spaceBetween: 16,
+  spaceBetween: 0,
   slidesPerView: 'auto'
 })
